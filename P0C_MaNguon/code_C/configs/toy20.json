@@ -1,0 +1,9 @@
+{
+ "raw": "data/toy20/yoochoose-clicks-toy20.dat",
+ "dataset": "toy20 (định dạng Yoochoose)",
+ "min_len": 2,
+ "min_count": 2,
+ "grid_thresholds": [2, 3],
+ "grid_orders": ["filter_then_split", "split_then_filter"],
+ "ratios": [0.8, 0.1, 0.1]
+}

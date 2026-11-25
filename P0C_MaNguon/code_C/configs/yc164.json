@@ -1,0 +1,12 @@
+{
+ "name": "yc164",
+ "type": "yoochoose",
+ "paths": {"clicks": "data/raw/yoochoose/yoochoose-clicks.dat"},
+ "yc_fraction": 64,
+ "min_len": 2,
+ "min_count": 5,
+ "grid_thresholds": [3, 5],
+ "grid_orders": ["filter_then_split", "split_then_filter"],
+ "bootstrap_B": 10000,
+ "out_dir": "out/yc164"
+}

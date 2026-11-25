@@ -1,0 +1,13 @@
+{
+ "name": "rr",
+ "type": "retailrocket",
+ "paths": {"events": "data/raw/retailrocket/events.csv",
+           "props": ["data/raw/retailrocket/item_properties_part1.csv", "data/raw/retailrocket/item_properties_part2.csv"],
+           "tree": "data/raw/retailrocket/category_tree.csv"},
+ "min_len": 2,
+ "min_count": 5,
+ "grid_thresholds": [3, 5],
+ "grid_orders": ["filter_then_split", "split_then_filter"],
+ "bootstrap_B": 10000,
+ "out_dir": "out/rr"
+}
