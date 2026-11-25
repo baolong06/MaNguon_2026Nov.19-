@@ -1,0 +1,1 @@
+{"unified_dir": "data/toy20/unified", "K": [3, 5], "ties": ["expected", "optimistic", "pessimistic"], "log_dir": "runs", "out_prefix": "runs/toy20_eval", "id_scores": {"M-ID (A) seed 2026": "data/toy20/mid_scores_seed2026.csv"}}

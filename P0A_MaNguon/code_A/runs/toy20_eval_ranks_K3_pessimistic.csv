@@ -1,0 +1,26 @@
+model,row,session,target,group,comparable,len_bucket,NA,b,tau,HR,RR,NDCG
+Random,0,18,5,warm,True,4–5,False,0.0,11.0,0.0,0.0,0.0
+Random,1,18,8,cold,False,4–5,False,0.0,11.0,0.0,0.0,0.0
+Random,2,18,3,long-tail,True,4–5,False,0.0,11.0,0.0,0.0,0.0
+Random,4,19,1,near-cold,True,4–5,False,0.0,11.0,0.0,0.0,0.0
+Random,5,19,9,cold,False,4–5,False,0.0,11.0,0.0,0.0,0.0
+Pop,0,18,5,warm,True,4–5,False,0.0,0.0,1.0,1.0,1.0
+Pop,1,18,8,cold,False,4–5,False,8.0,3.0,0.0,0.0,0.0
+Pop,2,18,3,long-tail,True,4–5,False,3.0,0.0,0.0,0.0,0.0
+Pop,4,19,1,near-cold,True,4–5,False,6.0,1.0,0.0,0.0,0.0
+Pop,5,19,9,cold,False,4–5,False,8.0,3.0,0.0,0.0,0.0
+Cat-Pop non-oracle,0,18,5,warm,True,4–5,False,0.0,0.0,1.0,1.0,1.0
+Cat-Pop non-oracle,1,18,8,cold,False,4–5,False,3.0,1.0,0.0,0.0,0.0
+Cat-Pop non-oracle,2,18,3,long-tail,True,4–5,False,6.0,0.0,0.0,0.0,0.0
+Cat-Pop non-oracle,4,19,1,near-cold,True,4–5,False,2.0,0.0,1.0,0.33333333333333326,0.5000000000000002
+Cat-Pop non-oracle,5,19,9,cold,False,4–5,False,9.0,2.0,0.0,0.0,0.0
+Cat-Pop oracle,0,18,5,warm,True,4–5,False,0.0,0.0,1.0,1.0,1.0
+Cat-Pop oracle,1,18,8,cold,False,4–5,False,3.0,1.0,0.0,0.0,0.0
+Cat-Pop oracle,2,18,3,long-tail,True,4–5,False,1.0,0.0,1.0,0.5,0.6309297535714575
+Cat-Pop oracle,4,19,1,near-cold,True,4–5,False,2.0,0.0,1.0,0.33333333333333326,0.5000000000000002
+Cat-Pop oracle,5,19,9,cold,False,4–5,False,3.0,1.0,0.0,0.0,0.0
+M-ID (A) seed 2026,0,18,5,warm,True,4–5,False,0.0,0.0,1.0,1.0,1.0
+M-ID (A) seed 2026,1,18,8,cold,False,4–5,True,,,,,
+M-ID (A) seed 2026,2,18,3,long-tail,True,4–5,False,1.0,0.0,1.0,0.5,0.6309297535714575
+M-ID (A) seed 2026,4,19,1,near-cold,True,4–5,False,1.0,0.0,1.0,0.5,0.6309297535714575
+M-ID (A) seed 2026,5,19,9,cold,False,4–5,True,,,,,

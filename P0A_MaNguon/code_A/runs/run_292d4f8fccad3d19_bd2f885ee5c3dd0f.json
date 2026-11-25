@@ -1,0 +1,37 @@
+{
+ "time_utc": "2026-11-19T07:02:26Z",
+ "python": "3.13.17",
+ "numpy": "2.5.5",
+ "pandas": "3.1.1",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "config": {
+  "raw": "data/toy20/yoochoose-clicks-toy20.dat",
+  "unified_dir": "data/toy20/unified",
+  "min_count": 2,
+  "theta_warm": 4,
+  "theta_near": 2,
+  "rho": 0.2,
+  "seed_cold": 4,
+  "mid_scores": "data/toy20/mid_scores_seed{seed}.csv",
+  "mid_seeds": [
+   2026,
+   2027,
+   2028
+  ],
+  "K": [
+   3,
+   5
+  ],
+  "B": 10000,
+  "recbole_dir": "runs/recbole_toy20",
+  "log_dir": "runs",
+  "out_json": "runs/toy20_A_results.json"
+ },
+ "config_hash": "292d4f8fccad3d19",
+ "data": {
+  "hash_manifest": "89b0c78b356598a7",
+  "hash_cold": "c839694344d35a5a",
+  "seed_cold": 4
+ },
+ "result_hash": "bd2f885ee5c3dd0f"
+}

@@ -1,0 +1,18 @@
+{
+ "n_cold_targets": 2,
+ "rank_expected": 4.5,
+ "part_warm_same_cat": 3.0,
+ "part_tie": 1.5,
+ "median_A_c": 3.0,
+ "median_Z_c": 2.0,
+ "HR@3_optimistic": 0.0,
+ "HR@3_expected": 0.0,
+ "HR@3_pessimistic": 0.0,
+ "CatOracle@3": 1.0,
+ "share_A_c_lt_K@3": 0.0,
+ "HR@5_optimistic": 1.0,
+ "HR@5_expected": 1.0,
+ "HR@5_pessimistic": 1.0,
+ "CatOracle@5": 1.0,
+ "share_A_c_lt_K@5": 1.0
+}

@@ -1,0 +1,3 @@
+row,target,category,A_c,Z_c,rank_optimistic,rank_expected,rank_pessimistic,part_warm_same_cat,part_tie_expected,HR@3_expected,HR@3_optimistic,HR@3_pessimistic,CatOracle@3,HR@5_expected,HR@5_optimistic,HR@5_pessimistic,CatOracle@5
+1,8,1,3,2,4,4.5,5,3,1.5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
+5,9,1,3,2,4,4.5,5,3,1.5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
