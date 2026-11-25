@@ -1,0 +1,32 @@
+{
+ "time_utc": "2026-11-19T07:20:13Z",
+ "python": "3.13.17",
+ "numpy": "2.5.5",
+ "pandas": "3.1.1",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "config": {
+  "raw": "data/toy20/yoochoose-clicks-toy20.dat",
+  "data_root": "data/toy20",
+  "min_count": 2,
+  "theta_warm": 4,
+  "theta_near": 2,
+  "rho": 0.2,
+  "seed": 4,
+  "K": [
+   3,
+   5
+  ],
+  "tie": "expected",
+  "B": 2000,
+  "boot_seed": 0,
+  "eps": 0.01,
+  "out_dir": "runs"
+ },
+ "config_hash": "e32f84531567413b",
+ "data": {
+  "hash_manifest": "89b0c78b356598a7",
+  "hash_cold": "c839694344d35a5a",
+  "seed_cold": 4
+ },
+ "result_hash": "64e9546eda26b099"
+}

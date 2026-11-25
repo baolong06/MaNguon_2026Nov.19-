@@ -1,0 +1,7 @@
+row,session_idx,prefix,target,sess_len,target_group,c,t,K,dist,dist_bucket,len_bucket,prefix_strip,prefix_keep
+0,18,6,5,4,warm,0,1,K0,,,4–5,6,6
+1,18,6 5,8,4,cold,0,2,cold_target,,,4–5,6 5,6 5
+2,18,6 5 8,3,4,long-tail,1,3,K2,1.0,1,4–5,6 5,6 5 8
+3,19,8,2,4,warm,1,1,K3,1.0,1,4–5,,8
+4,19,8 2,1,4,near-cold,1,2,K1,2.0,2,4–5,2,8 2
+5,19,8 2 1,9,4,cold,1,3,cold_target,,,4–5,2 1,8 2 1
