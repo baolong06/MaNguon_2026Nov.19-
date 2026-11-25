@@ -1,0 +1,1137 @@
+{
+ "rho0": {
+  "cfg": {
+   "ratios": [
+    0.8,
+    0.1,
+    0.1
+   ],
+   "rho": 0.0,
+   "seed": 4,
+   "n_sessions": 19,
+   "n_items": 12,
+   "k_cold": 0,
+   "removed_train_events": 0,
+   "dropped_train_sessions": [],
+   "hash_manifest": "3ecdcedf70e4e515",
+   "hash_cold": "391dd25bfdd3b206",
+   "filter_log": {
+    "rows_in": 61,
+    "rounds": 2,
+    "rows_out": 59,
+    "sessions_out": 19,
+    "items_out": 12
+   },
+   "category_coverage": 1.0,
+   "theta_warm": 4,
+   "theta_near": 2,
+   "min_count": 2
+  },
+  "manifest": [
+   [
+    "S01",
+    "train"
+   ],
+   [
+    "S02",
+    "train"
+   ],
+   [
+    "S03",
+    "train"
+   ],
+   [
+    "S05",
+    "train"
+   ],
+   [
+    "S06",
+    "train"
+   ],
+   [
+    "S07",
+    "train"
+   ],
+   [
+    "S08",
+    "train"
+   ],
+   [
+    "S09",
+    "train"
+   ],
+   [
+    "S10",
+    "train"
+   ],
+   [
+    "S11",
+    "train"
+   ],
+   [
+    "S12",
+    "train"
+   ],
+   [
+    "S13",
+    "train"
+   ],
+   [
+    "S14",
+    "train"
+   ],
+   [
+    "S15",
+    "train"
+   ],
+   [
+    "S16",
+    "train"
+   ],
+   [
+    "S17",
+    "valid"
+   ],
+   [
+    "S18",
+    "valid"
+   ],
+   [
+    "S19",
+    "test"
+   ],
+   [
+    "S20",
+    "test"
+   ]
+  ],
+  "cold": [
+   [
+    "N1",
+    "natural"
+   ]
+  ],
+  "stats": [
+   [
+    "A1",
+    2,
+    "near-cold"
+   ],
+   [
+    "A2",
+    6,
+    "warm"
+   ],
+   [
+    "A3",
+    4,
+    "long-tail"
+   ],
+   [
+    "A4",
+    1,
+    "near-cold"
+   ],
+   [
+    "D1",
+    10,
+    "warm"
+   ],
+   [
+    "D2",
+    5,
+    "warm"
+   ],
+   [
+    "D3",
+    3,
+    "long-tail"
+   ],
+   [
+    "D4",
+    4,
+    "long-tail"
+   ],
+   [
+    "N1",
+    0,
+    "cold"
+   ],
+   [
+    "L1",
+    4,
+    "long-tail"
+   ],
+   [
+    "L2",
+    2,
+    "near-cold"
+   ],
+   [
+    "L3",
+    4,
+    "long-tail"
+   ]
+  ],
+  "train": [
+   [
+    "S01",
+    "D1 A1 D1 A2"
+   ],
+   [
+    "S02",
+    "L1 L2 L1"
+   ],
+   [
+    "S03",
+    "D2 D1"
+   ],
+   [
+    "S05",
+    "D3 D2 D3 A2"
+   ],
+   [
+    "S06",
+    "D2 D1 A3"
+   ],
+   [
+    "S07",
+    "L3 L1"
+   ],
+   [
+    "S08",
+    "D2 A3"
+   ],
+   [
+    "S09",
+    "D1 D4 D1"
+   ],
+   [
+    "S10",
+    "L2 L3 L1"
+   ],
+   [
+    "S11",
+    "D1 A2 A1 D2 D4"
+   ],
+   [
+    "S12",
+    "D1 A2 A3"
+   ],
+   [
+    "S13",
+    "D3 D1 A2"
+   ],
+   [
+    "S14",
+    "D1 D4 A2 A3"
+   ],
+   [
+    "S15",
+    "L3 A4"
+   ],
+   [
+    "S16",
+    "D4 L3"
+   ]
+  ],
+  "test": [
+   [
+    "S19",
+    "D2",
+    "D1"
+   ],
+   [
+    "S19",
+    "D2 D1",
+    "D4"
+   ],
+   [
+    "S19",
+    "D2 D1 D4",
+    "A3"
+   ],
+   [
+    "S20",
+    "D4",
+    "A2"
+   ],
+   [
+    "S20",
+    "D4 A2",
+    "A1"
+   ],
+   [
+    "S20",
+    "D4 A2 A1",
+    "N1"
+   ]
+  ]
+ },
+ "qstrip_A": {
+  "instances": [
+   [
+    18,
+    "D2",
+    "D2",
+    "D1",
+    "warm",
+    true
+   ],
+   [
+    18,
+    "D2 D1",
+    "D2 D1",
+    "D4",
+    "cold",
+    false
+   ],
+   [
+    18,
+    "D2 D1 D4",
+    "D2 D1",
+    "A3",
+    "long-tail",
+    true
+   ],
+   [
+    19,
+    "D4 A2",
+    "A2",
+    "A1",
+    "near-cold",
+    true
+   ],
+   [
+    19,
+    "D4 A2 A1",
+    "A2 A1",
+    "N1",
+    "cold",
+    false
+   ]
+  ],
+  "results": {
+   "Random|K=3": [
+    [
+     "D1",
+     0,
+     11,
+     0.25,
+     0.1528,
+     0.1776
+    ],
+    [
+     "D4",
+     0,
+     11,
+     0.25,
+     0.1528,
+     0.1776
+    ],
+    [
+     "A3",
+     0,
+     11,
+     0.25,
+     0.1528,
+     0.1776
+    ],
+    [
+     "A1",
+     0,
+     11,
+     0.25,
+     0.1528,
+     0.1776
+    ],
+    [
+     "N1",
+     0,
+     11,
+     0.25,
+     0.1528,
+     0.1776
+    ]
+   ],
+   "Pop|K=3": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     8,
+     3,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A3",
+     3,
+     0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A1",
+     6,
+     1,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "N1",
+     8,
+     3,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "Cat-Pop non-oracle|K=3": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     3,
+     1,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A3",
+     6,
+     0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A1",
+     2,
+     0,
+     1.0,
+     0.3333,
+     0.5
+    ],
+    [
+     "N1",
+     9,
+     2,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "Cat-Pop oracle|K=3": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     3,
+     1,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A3",
+     1,
+     0,
+     1.0,
+     0.5,
+     0.6309
+    ],
+    [
+     "A1",
+     2,
+     0,
+     1.0,
+     0.3333,
+     0.5
+    ],
+    [
+     "N1",
+     3,
+     1,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "AGG|K=3": [
+    {
+     "model": "Random",
+     "group": "All",
+     "n": 5,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Random",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Random",
+     "group": "warm",
+     "n": 1,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Random",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Random",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Random",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.25,
+     "RR": 0.1528,
+     "NDCG": 0.1776
+    },
+    {
+     "model": "Pop",
+     "group": "All",
+     "n": 5,
+     "HR": 0.2,
+     "RR": 0.2,
+     "NDCG": 0.2
+    },
+    {
+     "model": "Pop",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.3333,
+     "RR": 0.3333,
+     "NDCG": 0.3333
+    },
+    {
+     "model": "Pop",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Pop",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Pop",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Pop",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "All",
+     "n": 5,
+     "HR": 0.4,
+     "RR": 0.2667,
+     "NDCG": 0.3
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.6667,
+     "RR": 0.4444,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.5,
+     "RR": 0.1667,
+     "NDCG": 0.25
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 0.3333,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "All",
+     "n": 5,
+     "HR": 0.6,
+     "RR": 0.3667,
+     "NDCG": 0.4262
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 1.0,
+     "RR": 0.6111,
+     "NDCG": 0.7103
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 1.0,
+     "RR": 0.4167,
+     "NDCG": 0.5655
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 0.3333,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "All",
+     "n": 5,
+     "HR": "N/A",
+     "RR": "N/A",
+     "NDCG": "N/A"
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.3333,
+     "RR": 0.3333,
+     "NDCG": 0.3333
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "cold",
+     "n": 2,
+     "HR": "N/A",
+     "RR": "N/A",
+     "NDCG": "N/A"
+    }
+   ],
+   "Random|K=5": [
+    [
+     "D1",
+     0,
+     11,
+     0.4167,
+     0.1903,
+     0.2457
+    ],
+    [
+     "D4",
+     0,
+     11,
+     0.4167,
+     0.1903,
+     0.2457
+    ],
+    [
+     "A3",
+     0,
+     11,
+     0.4167,
+     0.1903,
+     0.2457
+    ],
+    [
+     "A1",
+     0,
+     11,
+     0.4167,
+     0.1903,
+     0.2457
+    ],
+    [
+     "N1",
+     0,
+     11,
+     0.4167,
+     0.1903,
+     0.2457
+    ]
+   ],
+   "Pop|K=5": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     8,
+     3,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A3",
+     3,
+     0,
+     1.0,
+     0.25,
+     0.4307
+    ],
+    [
+     "A1",
+     6,
+     1,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "N1",
+     8,
+     3,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "Cat-Pop non-oracle|K=5": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     3,
+     1,
+     1.0,
+     0.225,
+     0.4088
+    ],
+    [
+     "A3",
+     6,
+     0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "A1",
+     2,
+     0,
+     1.0,
+     0.3333,
+     0.5
+    ],
+    [
+     "N1",
+     9,
+     2,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "Cat-Pop oracle|K=5": [
+    [
+     "D1",
+     0,
+     0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     "D4",
+     3,
+     1,
+     1.0,
+     0.225,
+     0.4088
+    ],
+    [
+     "A3",
+     1,
+     0,
+     1.0,
+     0.5,
+     0.6309
+    ],
+    [
+     "A1",
+     2,
+     0,
+     1.0,
+     0.3333,
+     0.5
+    ],
+    [
+     "N1",
+     3,
+     1,
+     1.0,
+     0.225,
+     0.4088
+    ]
+   ],
+   "AGG|K=5": [
+    {
+     "model": "Random",
+     "group": "All",
+     "n": 5,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Random",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Random",
+     "group": "warm",
+     "n": 1,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Random",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Random",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Random",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.4167,
+     "RR": 0.1903,
+     "NDCG": 0.2457
+    },
+    {
+     "model": "Pop",
+     "group": "All",
+     "n": 5,
+     "HR": 0.4,
+     "RR": 0.25,
+     "NDCG": 0.2861
+    },
+    {
+     "model": "Pop",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.6667,
+     "RR": 0.4167,
+     "NDCG": 0.4769
+    },
+    {
+     "model": "Pop",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Pop",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.5,
+     "RR": 0.125,
+     "NDCG": 0.2153
+    },
+    {
+     "model": "Pop",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Pop",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "All",
+     "n": 5,
+     "HR": 0.6,
+     "RR": 0.3117,
+     "NDCG": 0.3818
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.6667,
+     "RR": 0.4444,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.5,
+     "RR": 0.1667,
+     "NDCG": 0.25
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 0.3333,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop non-oracle",
+     "group": "cold",
+     "n": 2,
+     "HR": 0.5,
+     "RR": 0.1125,
+     "NDCG": 0.2044
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "All",
+     "n": 5,
+     "HR": 1.0,
+     "RR": 0.4567,
+     "NDCG": 0.5897
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 1.0,
+     "RR": 0.6111,
+     "NDCG": 0.7103
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 1.0,
+     "RR": 0.4167,
+     "NDCG": 0.5655
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 0.3333,
+     "NDCG": 0.5
+    },
+    {
+     "model": "Cat-Pop oracle",
+     "group": "cold",
+     "n": 2,
+     "HR": 1.0,
+     "RR": 0.225,
+     "NDCG": 0.4088
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "All",
+     "n": 5,
+     "HR": "N/A",
+     "RR": "N/A",
+     "NDCG": "N/A"
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "All\\cold",
+     "n": 3,
+     "HR": 0.6667,
+     "RR": 0.4167,
+     "NDCG": 0.4769
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "warm",
+     "n": 1,
+     "HR": 1.0,
+     "RR": 1.0,
+     "NDCG": 1.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "long-tail",
+     "n": 2,
+     "HR": 0.5,
+     "RR": 0.125,
+     "NDCG": 0.2153
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "near-cold",
+     "n": 1,
+     "HR": 0.0,
+     "RR": 0.0,
+     "NDCG": 0.0
+    },
+    {
+     "model": "ID-model(A) [điểm = Pop, chỉ để kiểm quy tắc N/A]",
+     "group": "cold",
+     "n": 2,
+     "HR": "N/A",
+     "RR": "N/A",
+     "NDCG": "N/A"
+    }
+   ]
+  }
+ }
+}

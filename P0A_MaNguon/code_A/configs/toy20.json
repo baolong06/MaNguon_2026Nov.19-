@@ -1,0 +1,16 @@
+{
+ "raw": "data/toy20/yoochoose-clicks-toy20.dat",
+ "unified_dir": "data/toy20/unified",
+ "min_count": 2,
+ "theta_warm": 4,
+ "theta_near": 2,
+ "rho": 0.2,
+ "seed_cold": 4,
+ "mid_scores": "data/toy20/mid_scores_seed{seed}.csv",
+ "mid_seeds": [2026, 2027, 2028],
+ "K": [3, 5],
+ "B": 10000,
+ "recbole_dir": "runs/recbole_toy20",
+ "log_dir": "runs",
+ "out_json": "runs/toy20_A_results.json"
+}

@@ -1,0 +1,31 @@
+model,group,n,HR,RR,NDCG
+Random,All,5,0.25,0.1528,0.1776
+Random,All\cold,3,0.25,0.1528,0.1776
+Random,warm,1,0.25,0.1528,0.1776
+Random,long-tail,2,0.25,0.1528,0.1776
+Random,near-cold,1,0.25,0.1528,0.1776
+Random,cold,2,0.25,0.1528,0.1776
+Pop,All,5,0.2,0.2,0.2
+Pop,All\cold,3,0.3333,0.3333,0.3333
+Pop,warm,1,1.0,1.0,1.0
+Pop,long-tail,2,0.0,0.0,0.0
+Pop,near-cold,1,0.0,0.0,0.0
+Pop,cold,2,0.0,0.0,0.0
+Cat-Pop non-oracle,All,5,0.4,0.2667,0.3
+Cat-Pop non-oracle,All\cold,3,0.6667,0.4444,0.5
+Cat-Pop non-oracle,warm,1,1.0,1.0,1.0
+Cat-Pop non-oracle,long-tail,2,0.5,0.1667,0.25
+Cat-Pop non-oracle,near-cold,1,1.0,0.3333,0.5
+Cat-Pop non-oracle,cold,2,0.0,0.0,0.0
+Cat-Pop oracle,All,5,0.6,0.3667,0.4262
+Cat-Pop oracle,All\cold,3,1.0,0.6111,0.7103
+Cat-Pop oracle,warm,1,1.0,1.0,1.0
+Cat-Pop oracle,long-tail,2,1.0,0.4167,0.5655
+Cat-Pop oracle,near-cold,1,1.0,0.3333,0.5
+Cat-Pop oracle,cold,2,0.0,0.0,0.0
+M-ID (A) seed 2026,All,5,N/A,N/A,N/A
+M-ID (A) seed 2026,All\cold,3,1.0,0.6667,0.754
+M-ID (A) seed 2026,warm,1,1.0,1.0,1.0
+M-ID (A) seed 2026,long-tail,2,1.0,0.5,0.6309
+M-ID (A) seed 2026,near-cold,1,1.0,0.5,0.6309
+M-ID (A) seed 2026,cold,2,N/A,N/A,N/A

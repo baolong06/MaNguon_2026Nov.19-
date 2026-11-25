@@ -1,0 +1,31 @@
+{
+ "time_utc": "2026-11-19T07:04:13Z",
+ "python": "3.13.17",
+ "numpy": "2.5.5",
+ "pandas": "3.1.1",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "config": {
+  "unified_dir": "data/toy20/unified",
+  "K": [
+   3,
+   5
+  ],
+  "ties": [
+   "expected",
+   "optimistic",
+   "pessimistic"
+  ],
+  "log_dir": "runs",
+  "out_prefix": "runs/toy20_eval",
+  "id_scores": {
+   "M-ID (A) seed 2026": "data/toy20/mid_scores_seed2026.csv"
+  }
+ },
+ "config_hash": "0dc06f0c7b0ebc91",
+ "data": {
+  "hash_manifest": "89b0c78b356598a7",
+  "hash_cold": "c839694344d35a5a",
+  "seed_cold": 4
+ },
+ "result_hash": "fc92e3cee5494d98"
+}

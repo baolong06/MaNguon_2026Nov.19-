@@ -1,0 +1,4389 @@
+{
+ "config": {
+  "raw": "data/toy20/yoochoose-clicks-toy20.dat",
+  "unified_dir": "data/toy20/unified",
+  "min_count": 2,
+  "theta_warm": 4,
+  "theta_near": 2,
+  "rho": 0.2,
+  "seed_cold": 4,
+  "mid_scores": "data/toy20/mid_scores_seed{seed}.csv",
+  "mid_seeds": [
+   2026,
+   2027,
+   2028
+  ],
+  "K": [
+   3,
+   5
+  ],
+  "B": 10000,
+  "recbole_dir": "runs/recbole_toy20",
+  "log_dir": "runs",
+  "out_json": "runs/toy20_A_results.json"
+ },
+ "n_excluded": 1,
+ "n_EA": 5,
+ "cold": [
+  "A4",
+  "D4",
+  "N1",
+  "L3"
+ ],
+ "instances": [
+  {
+   "row": 0,
+   "session": 18,
+   "prefix": "D2",
+   "prefix_strip": "D2",
+   "target": "D1",
+   "group": "warm",
+   "comparable": true,
+   "len_bucket": "4–5"
+  },
+  {
+   "row": 1,
+   "session": 18,
+   "prefix": "D2 D1",
+   "prefix_strip": "D2 D1",
+   "target": "D4",
+   "group": "cold",
+   "comparable": false,
+   "len_bucket": "4–5"
+  },
+  {
+   "row": 2,
+   "session": 18,
+   "prefix": "D2 D1 D4",
+   "prefix_strip": "D2 D1",
+   "target": "A3",
+   "group": "long-tail",
+   "comparable": true,
+   "len_bucket": "4–5"
+  },
+  {
+   "row": 4,
+   "session": 19,
+   "prefix": "D4 A2",
+   "prefix_strip": "A2",
+   "target": "A1",
+   "group": "near-cold",
+   "comparable": true,
+   "len_bucket": "4–5"
+  },
+  {
+   "row": 5,
+   "session": 19,
+   "prefix": "D4 A2 A1",
+   "prefix_strip": "A2 A1",
+   "target": "N1",
+   "group": "cold",
+   "comparable": false,
+   "len_bucket": "4–5"
+  }
+ ],
+ "excluded": [
+  {
+   "row": 3,
+   "prefix": "D4",
+   "target": "A2"
+  }
+ ],
+ "per_instance": {
+  "K=3|expected": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=3|optimistic": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=3|pessimistic": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|expected": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.225,
+    "NDCG": 0.4088
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.225,
+    "NDCG": 0.4088
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.225,
+    "NDCG": 0.4088
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|optimistic": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|pessimistic": [
+   {
+    "model": "Random",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 0,
+    "tau": 11,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "Pop",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 6,
+    "tau": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 8,
+    "tau": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.2,
+    "NDCG": 0.3869
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 9,
+    "tau": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.2,
+    "NDCG": 0.3869
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 3,
+    "tau": 1,
+    "HR": 1.0,
+    "RR": 0.2,
+    "NDCG": 0.3869
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 0,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": null,
+    "tau": null,
+    "HR": null,
+    "RR": null,
+    "NDCG": null
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 0,
+    "target": "D1",
+    "group": "warm",
+    "b": 1,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 1,
+    "target": "D4",
+    "group": "cold",
+    "b": 7,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 2,
+    "target": "A3",
+    "group": "long-tail",
+    "b": 3,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 4,
+    "target": "A1",
+    "group": "near-cold",
+    "b": 2,
+    "tau": 0,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "row": 5,
+    "target": "N1",
+    "group": "cold",
+    "b": 6,
+    "tau": 0,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ]
+ },
+ "aggregate": {
+  "K=3|expected": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.2,
+    "RR": 0.2,
+    "NDCG": 0.2
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.3333,
+    "RR": 0.3333,
+    "NDCG": 0.3333
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.2667,
+    "NDCG": 0.3
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3667,
+    "NDCG": 0.4262
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.1667,
+    "NDCG": 0.2262
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.2778,
+    "NDCG": 0.377
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=3|optimistic": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.2,
+    "RR": 0.2,
+    "NDCG": 0.2
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.3333,
+    "RR": 0.3333,
+    "NDCG": 0.3333
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.2667,
+    "NDCG": 0.3
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3667,
+    "NDCG": 0.4262
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.1667,
+    "NDCG": 0.2262
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.2778,
+    "NDCG": 0.377
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=3|pessimistic": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.2,
+    "RR": 0.2,
+    "NDCG": 0.2
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.3333,
+    "RR": 0.3333,
+    "NDCG": 0.3333
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.2667,
+    "NDCG": 0.3
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3667,
+    "NDCG": 0.4262
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.1667,
+    "NDCG": 0.2262
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.2778,
+    "NDCG": 0.377
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|expected": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.25,
+    "NDCG": 0.2861
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4167,
+    "NDCG": 0.4769
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.125,
+    "NDCG": 0.2153
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3117,
+    "NDCG": 0.3818
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1125,
+    "NDCG": 0.2044
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 1.0,
+    "RR": 0.4567,
+    "NDCG": 0.5897
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.225,
+    "NDCG": 0.4088
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.2167,
+    "NDCG": 0.3123
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.3611,
+    "NDCG": 0.5205
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.2917,
+    "NDCG": 0.4653
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|optimistic": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.25,
+    "NDCG": 0.2861
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4167,
+    "NDCG": 0.4769
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.125,
+    "NDCG": 0.2153
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3167,
+    "NDCG": 0.3861
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.125,
+    "NDCG": 0.2153
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 1.0,
+    "RR": 0.4667,
+    "NDCG": 0.5985
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.25,
+    "NDCG": 0.4307
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.2167,
+    "NDCG": 0.3123
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.3611,
+    "NDCG": 0.5205
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.2917,
+    "NDCG": 0.4653
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ],
+  "K=5|pessimistic": [
+   {
+    "model": "Random",
+    "group": "All",
+    "n": 5,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "warm",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Random",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "All",
+    "n": 5,
+    "HR": 0.4,
+    "RR": 0.25,
+    "NDCG": 0.2861
+   },
+   {
+    "model": "Pop",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4167,
+    "NDCG": 0.4769
+   },
+   {
+    "model": "Pop",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Pop",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.125,
+    "NDCG": 0.2153
+   },
+   {
+    "model": "Pop",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Pop",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.3067,
+    "NDCG": 0.3774
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1667,
+    "NDCG": 0.25
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.5,
+    "RR": 0.1,
+    "NDCG": 0.1934
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All",
+    "n": 5,
+    "HR": 1.0,
+    "RR": 0.4467,
+    "NDCG": 0.5809
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.4167,
+    "NDCG": 0.5655
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "group": "cold",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.2,
+    "NDCG": 0.3869
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All",
+    "n": 5,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 1.0,
+    "NDCG": 1.0
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (A)",
+    "group": "cold",
+    "n": 2,
+    "HR": "N/A",
+    "RR": "N/A",
+    "NDCG": "N/A"
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All",
+    "n": 5,
+    "HR": 0.6,
+    "RR": 0.2167,
+    "NDCG": 0.3123
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "All\\cold",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.3611,
+    "NDCG": 0.5205
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "warm",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.5,
+    "NDCG": 0.6309
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "long-tail",
+    "n": 2,
+    "HR": 1.0,
+    "RR": 0.2917,
+    "NDCG": 0.4653
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "near-cold",
+    "n": 1,
+    "HR": 1.0,
+    "RR": 0.3333,
+    "NDCG": 0.5
+   },
+   {
+    "model": "M-ID (B)",
+    "group": "cold",
+    "n": 2,
+    "HR": 0.0,
+    "RR": 0.0,
+    "NDCG": 0.0
+   }
+  ]
+ },
+ "by_length": {
+  "K=3": [
+   {
+    "model": "Random",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Random",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.25,
+    "RR": 0.1528,
+    "NDCG": 0.1776
+   },
+   {
+    "model": "Random",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Random",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.3333,
+    "RR": 0.3333,
+    "NDCG": 0.3333
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.2778,
+    "NDCG": 0.377
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   }
+  ],
+  "K=5": [
+   {
+    "model": "Random",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Random",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.4167,
+    "RR": 0.1903,
+    "NDCG": 0.2457
+   },
+   {
+    "model": "Random",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Random",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4167,
+    "NDCG": 0.4769
+   },
+   {
+    "model": "Pop",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Pop",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 0.6667,
+    "RR": 0.4444,
+    "NDCG": 0.5
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop non-oracle",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6111,
+    "NDCG": 0.7103
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "Cat-Pop oracle",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.6667,
+    "NDCG": 0.754
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (A)",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "2–3",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "4–5",
+    "n": 3,
+    "HR": 1.0,
+    "RR": 0.3611,
+    "NDCG": 0.5205
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": "6–10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   },
+   {
+    "model": "M-ID (B)",
+    "len_bucket": ">10",
+    "n": 0,
+    "HR": "—",
+    "RR": "—",
+    "NDCG": "—"
+   }
+  ]
+ },
+ "decomposition": [
+  {
+   "row": 1,
+   "target": "D4",
+   "category": 1,
+   "A_c": 3,
+   "Z_c": 2,
+   "rank_optimistic": 4,
+   "rank_expected": 4.5,
+   "rank_pessimistic": 5,
+   "part_warm_same_cat": 3,
+   "part_tie_expected": 1.5,
+   "HR@3_expected": 0.0,
+   "HR@3_optimistic": 0.0,
+   "HR@3_pessimistic": 0.0,
+   "CatOracle@3": 1.0,
+   "HR@5_expected": 1.0,
+   "HR@5_optimistic": 1.0,
+   "HR@5_pessimistic": 1.0,
+   "CatOracle@5": 1.0,
+   "HR@4_expected": 0.5,
+   "HR@4_optimistic": 1.0,
+   "HR@4_pessimistic": 0.0,
+   "CatOracle@4": 1.0
+  },
+  {
+   "row": 5,
+   "target": "N1",
+   "category": 1,
+   "A_c": 3,
+   "Z_c": 2,
+   "rank_optimistic": 4,
+   "rank_expected": 4.5,
+   "rank_pessimistic": 5,
+   "part_warm_same_cat": 3,
+   "part_tie_expected": 1.5,
+   "HR@3_expected": 0.0,
+   "HR@3_optimistic": 0.0,
+   "HR@3_pessimistic": 0.0,
+   "CatOracle@3": 1.0,
+   "HR@5_expected": 1.0,
+   "HR@5_optimistic": 1.0,
+   "HR@5_pessimistic": 1.0,
+   "CatOracle@5": 1.0,
+   "HR@4_expected": 0.5,
+   "HR@4_optimistic": 1.0,
+   "HR@4_pessimistic": 0.0,
+   "CatOracle@4": 1.0
+  }
+ ],
+ "decomposition_summary": {
+  "n_cold_targets": 2,
+  "rank_expected": 4.5,
+  "part_warm_same_cat": 3.0,
+  "part_tie": 1.5,
+  "median_A_c": 3.0,
+  "median_Z_c": 2.0,
+  "HR@3_optimistic": 0.0,
+  "HR@3_expected": 0.0,
+  "HR@3_pessimistic": 0.0,
+  "CatOracle@3": 1.0,
+  "share_A_c_lt_K@3": 0.0,
+  "HR@5_optimistic": 1.0,
+  "HR@5_expected": 1.0,
+  "HR@5_pessimistic": 1.0,
+  "CatOracle@5": 1.0,
+  "share_A_c_lt_K@5": 1.0,
+  "HR@4_optimistic": 1.0,
+  "HR@4_expected": 0.5,
+  "HR@4_pessimistic": 0.0,
+  "CatOracle@4": 1.0,
+  "share_A_c_lt_K@4": 1.0
+ },
+ "seeds_All_minus_cold": {
+  "HR": {
+   "per_seed": [
+    1.0,
+    1.0,
+    0.6667
+   ],
+   "mean": 0.8889,
+   "sd": 0.1925
+  },
+  "RR": {
+   "per_seed": [
+    0.6667,
+    0.8333,
+    0.5
+   ],
+   "mean": 0.6667,
+   "sd": 0.1667
+  },
+  "NDCG": {
+   "per_seed": [
+    0.754,
+    0.877,
+    0.5436
+   ],
+   "mean": 0.7249,
+   "sd": 0.1686
+  }
+ },
+ "seed_mean_HR_per_instance": [
+  {
+   "row": 0,
+   "HR": 1.0
+  },
+  {
+   "row": 2,
+   "HR": 1.0
+  },
+  {
+   "row": 4,
+   "HR": 0.6667
+  }
+ ],
+ "tests": {
+  "MID_minus_Pop_AllMinusCold": {
+   "delta": 0.5555555555555555,
+   "lo": 0.5,
+   "hi": 0.6666666666666666,
+   "p": 0.49665033496650335,
+   "n_inst": 3,
+   "n_sess": 2
+  },
+  "CatPopNO_minus_Pop_cold": {
+   "delta": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "p": 1.0,
+   "n_inst": 2,
+   "n_sess": 2
+  },
+  "Pop_warm_minus_longtail": {
+   "delta": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n_a": 1,
+   "n_b": 2,
+   "n_sess": 2,
+   "B_valid": 7551
+  },
+  "holm": [
+   0.9933,
+   1.0
+  ],
+  "holm_demo": {
+   "p": [
+    0.01,
+    0.04,
+    0.03
+   ],
+   "adjusted": [
+    0.03,
+    0.06,
+    0.06
+   ]
+  }
+ },
+ "recbole_export": {
+  "n_train": 23,
+  "n_valid": 1,
+  "n_test": 3
+ },
+ "log": {
+  "path": "run_292d4f8fccad3d19_8d69925a6564e61d.json",
+  "config_hash": "292d4f8fccad3d19",
+  "result_hash": "8d69925a6564e61d",
+  "hash_manifest": "89b0c78b356598a7",
+  "hash_cold": "c839694344d35a5a"
+ }
+}

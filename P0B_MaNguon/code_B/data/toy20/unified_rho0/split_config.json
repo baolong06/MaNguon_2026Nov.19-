@@ -1,0 +1,27 @@
+{
+ "ratios": [
+  0.8,
+  0.1,
+  0.1
+ ],
+ "rho": 0.0,
+ "seed": 4,
+ "n_sessions": 19,
+ "n_items": 12,
+ "k_cold": 0,
+ "removed_train_events": 0,
+ "dropped_train_sessions": [],
+ "hash_manifest": "3ecdcedf70e4e515",
+ "hash_cold": "391dd25bfdd3b206",
+ "filter_log": {
+  "rows_in": 61,
+  "rounds": 2,
+  "rows_out": 59,
+  "sessions_out": 19,
+  "items_out": 12
+ },
+ "category_coverage": 1.0,
+ "theta_warm": 4,
+ "theta_near": 2,
+ "min_count": 2
+}

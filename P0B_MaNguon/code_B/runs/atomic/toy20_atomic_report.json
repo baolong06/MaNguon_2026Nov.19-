@@ -1,0 +1,54 @@
+{
+ "strip": {
+  "rows": {
+   "train": 23,
+   "valid": 1,
+   "test": 3
+  },
+  "dropped_empty_prefix": {
+   "valid": 1,
+   "test": 1
+  },
+  "vocab_size": 8,
+  "vocab_cold": [],
+  "cold_as_target_eval": []
+ },
+ "keep": {
+  "rows": {
+   "train": 23,
+   "valid": 2,
+   "test": 4
+  },
+  "dropped_empty_prefix": {
+   "valid": 0,
+   "test": 0
+  },
+  "vocab_size": 12,
+  "vocab_cold": [
+   4,
+   8,
+   9,
+   12
+  ],
+  "cold_as_target_eval": []
+ },
+ "ref": {
+  "rows": {
+   "train": 30,
+   "valid": 2,
+   "test": 4
+  },
+  "dropped_empty_prefix": {
+   "valid": 0,
+   "test": 0
+  },
+  "vocab_size": 12,
+  "vocab_cold": [
+   4,
+   8,
+   9,
+   12
+  ],
+  "cold_as_target_eval": []
+ }
+}

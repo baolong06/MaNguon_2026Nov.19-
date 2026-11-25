@@ -1,0 +1,13 @@
+item_idx,category_idx,count_train,group
+1,2,2,near-cold
+2,2,6,warm
+3,2,4,long-tail
+4,2,0,cold
+5,1,10,warm
+6,1,5,warm
+7,1,3,long-tail
+8,1,0,cold
+9,1,0,cold
+10,3,3,long-tail
+11,3,2,near-cold
+12,3,0,cold

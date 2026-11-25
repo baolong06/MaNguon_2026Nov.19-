@@ -1,0 +1,11 @@
+{
+ "name": "dg",
+ "type": "diginetica",
+ "paths": {"views": "data/raw/diginetica/train-item-views.csv", "categories": "data/raw/diginetica/product-categories.csv"},
+ "min_len": 2,
+ "min_count": 5,
+ "grid_thresholds": [3, 5],
+ "grid_orders": ["filter_then_split", "split_then_filter"],
+ "bootstrap_B": 10000,
+ "out_dir": "out/dg"
+}

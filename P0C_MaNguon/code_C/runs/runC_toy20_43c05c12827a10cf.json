@@ -1,0 +1,29 @@
+{
+ "time_utc": "2026-11-19T07:19:01Z",
+ "python": "3.13.17",
+ "numpy": "2.5.5",
+ "pandas": "3.1.1",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "config": {
+  "name": "toy20",
+  "type": "yoochoose",
+  "paths": {
+   "clicks": "data/toy20/yoochoose-clicks-toy20.dat"
+  },
+  "yc_fraction": null,
+  "min_len": 2,
+  "min_count": 2,
+  "grid_thresholds": [
+   2,
+   3
+  ],
+  "grid_orders": [
+   "filter_then_split",
+   "split_then_filter"
+  ],
+  "bootstrap_B": 10000,
+  "out_dir": "out/toy20"
+ },
+ "data_hash": "43c05c12827a10cf",
+ "name": "toy20"
+}

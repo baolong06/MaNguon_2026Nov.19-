@@ -1,0 +1,21 @@
+model,len_bucket,n,HR,RR,NDCG
+Random,2–3,0,—,—,—
+Random,4–5,3,0.25,0.1528,0.1776
+Random,6–10,0,—,—,—
+Random,>10,0,—,—,—
+Pop,2–3,0,—,—,—
+Pop,4–5,3,0.3333,0.3333,0.3333
+Pop,6–10,0,—,—,—
+Pop,>10,0,—,—,—
+Cat-Pop non-oracle,2–3,0,—,—,—
+Cat-Pop non-oracle,4–5,3,0.6667,0.4444,0.5
+Cat-Pop non-oracle,6–10,0,—,—,—
+Cat-Pop non-oracle,>10,0,—,—,—
+Cat-Pop oracle,2–3,0,—,—,—
+Cat-Pop oracle,4–5,3,1.0,0.6111,0.7103
+Cat-Pop oracle,6–10,0,—,—,—
+Cat-Pop oracle,>10,0,—,—,—
+M-ID (A) seed 2026,2–3,0,—,—,—
+M-ID (A) seed 2026,4–5,3,1.0,0.6667,0.754
+M-ID (A) seed 2026,6–10,0,—,—,—
+M-ID (A) seed 2026,>10,0,—,—,—

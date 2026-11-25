@@ -1,0 +1,24 @@
+session_id:token	item_id_list:token_seq	item_id:token
+tr1_1	5	1
+tr1_2	5 1	5
+tr1_3	5 1 5	2
+tr2_1	10	11
+tr2_2	10 11	10
+tr3_1	6	5
+tr4_1	7	6
+tr4_2	7 6	7
+tr4_3	7 6 7	2
+tr5_1	6	5
+tr5_2	6 5	3
+tr7_1	6	3
+tr8_1	5	5
+tr9_1	11	10
+tr10_1	5	2
+tr10_2	5 2	1
+tr10_3	5 2 1	6
+tr11_1	5	2
+tr11_2	5 2	3
+tr12_1	7	5
+tr12_2	7 5	2
+tr13_1	5	2
+tr13_2	5 2	3

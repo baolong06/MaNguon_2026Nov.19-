@@ -1,0 +1,53 @@
+{
+ "checks": [
+  {
+   "id": 1,
+   "check": "Khóa băm manifest và I_cold khớp split_config.json",
+   "passed": true,
+   "value": "89b0c78b356598a7 / c839694344d35a5a"
+  },
+  {
+   "id": 2,
+   "check": "Tham chiếu cùng manifest, item_map, instances_test với P0",
+   "passed": true,
+   "value": ""
+  },
+  {
+   "id": 3,
+   "check": "Mọi item thuộc I_cold có count_train = 0 trong train P0",
+   "passed": true,
+   "value": ""
+  },
+  {
+   "id": 4,
+   "check": "Σ_k n_k = số tình huống có đích cũ (test)",
+   "passed": true,
+   "value": "4 = 4"
+  },
+  {
+   "id": 5,
+   "check": "Không tình huống đích mới nào mang tầng K0–K3",
+   "passed": true,
+   "value": ""
+  },
+  {
+   "id": 6,
+   "check": "Từ vựng Q-strip ∩ I_cold = ∅",
+   "passed": true,
+   "value": "[]"
+  },
+  {
+   "id": 7,
+   "check": "Từ vựng Q-keep ∩ I_cold = I_cold ∩ tiền tố valid/test; không mã mới làm đích",
+   "passed": true,
+   "value": "[4, 8, 9, 12]"
+  },
+  {
+   "id": 8,
+   "check": "Tham chiếu: item rút (sampled) có lượt train",
+   "passed": true,
+   "value": "{8: 4, 12: 4}"
+  }
+ ],
+ "hash_strata_test": "08190914d1f4e4c8"
+}
